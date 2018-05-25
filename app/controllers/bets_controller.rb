@@ -9,16 +9,4 @@ class BetsController < ApplicationController
   def show
     @bet = Bet.find(params[:id])
   end
-
-  def participate
-    @bet = Bet.find(params[:id])
-    @bet.ongoing!
-    redirect_to bets_path
-  end
-
-   def denied
-    @bet = Bet.find(params[:id])
-    @bet.refused!
-    redirect_to bets_path
-  end
 end
