@@ -8,45 +8,34 @@
 
 <div class="hidden-sm hidden-md hidden-lg"> -->
   <div class="mobile-background">
-    <div class="mobile-contain">
       <div class="mobile-H1">
+        <div class="col-xs-12">
+          <h1>BETY</h1>
+          <h3>Tes paris entre amis</h3>
 
-      <div class="col-xs-12">
-
-       <div class="dropdown">
-        <% if user_signed_in?%>
-        <div class="banner-mobile"></div>
-      <h1>BETY</h1>
-      <h3>Tes paris entre amis</h3>
+          <% if user_signed_in?%>
+          <div class="banner-mobile"></div>
 
 
-      <%= link_to new_game_path do %>
-      <%= image_tag "logo_fond_blanc.png" %>
-      <% end %>
-      <% else %>
-      <%= link_to new_user_session_path do %>
-      <%= image_tag "logo_fond_blanc.png" %>
+          <%= link_to new_game_path do %>
+          <%= image_tag "logo_fond_blanc.png" %>
+          <% end %>
+          <% else %>
+          <%= link_to new_user_session_path do %>
+          <%= image_tag "logo_fond_blanc.png" %>
 
-      <% end %>
-      <% end %>
-      <br>
-      <div class="mobile-H1">
-       <p>Touche BETY pour créer un pari</p>
-     </div>
-     <div class="banner-mobile">
-      <%= link_to "Mes paris en cours", bets_path, class: "btn btn-bety-primary " %>
+          <% end %>
+          <% end %>
+          <br>
+          <div class="mobile-H1">
+           <p>Touche BETY pour créer un pari</p>
+         </div>
+         <div class="banner-mobile">
+          <%= link_to "Mes paris en cours", bets_path, class: "btn btn-bety-primary " %>
 
+        </div>
+
+
+      </div>
     </div>
-
-
-<!--       <i  data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-center navbar-wagon-dropdown-menu">
-        <li> new_user_session_path >Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      -->   </ul>
-    </div>
-  </div>
-</div>
-</div>
 </div>
