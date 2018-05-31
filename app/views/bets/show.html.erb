@@ -14,7 +14,9 @@
       <div class="card-description">
         <h2><%= @bet.game.title %></h2>
       </div>
-      <%= cl_image_tag @bet.game.bets.find_by(challenger: true).user.photo_url, class: "card-user" %>
+
+
+      <img src=<%= @bet.user.photo.present? ? cl_image_path(@bet.user.photo, crop: :fill) : image_path("user.jpeg") %> class="card-user" >
     </div>
     <div class="card-footer ">
 

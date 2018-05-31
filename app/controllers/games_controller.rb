@@ -91,7 +91,7 @@ def close
   bet = Bet.find(params[:id])
   @game = bet.game
   if @game.update(game_params)
-    @total_reward = @game.bets.ongoing.count * @game.price
+    @total_reward = (@game.bets.ongoing.count * @game.price).to_f
     success = true
     prizes = @game.prizes.where(ranking:(1..3))
 
